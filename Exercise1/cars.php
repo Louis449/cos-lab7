@@ -8,14 +8,16 @@
 <body>
     <h1>Query Results from the Connected Database</h1>
 
-    <table border="1">
-        <th>car_id</th>
-        <th>make</th>
-        <th>model</th>
-        <th>price</th>
-        <th>year of make</th>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>ID</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Year</th>
+        </tr>
     <?php
-        require_once "settings.php";
+        require_once "../settings.php";
         $dbconn = @mysqli_connect($host, $user, $pwd, $sql_db);
         if ($dbconn) {
             // $query = "SELECT * FROM cars";
